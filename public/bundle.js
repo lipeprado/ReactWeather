@@ -57,8 +57,8 @@
 
 	var Main = __webpack_require__(216);
 	var Weather = __webpack_require__(218);
-	var About = __webpack_require__(247);
-	var Examples = __webpack_require__(248);
+	var About = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"About\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var Examples = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"Examples\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	ReactDOM.render(React.createElement(
 	    Router,
@@ -24860,11 +24860,6 @@
 	        'div',
 	        null,
 	        React.createElement(Nav, null),
-	        React.createElement(
-	            'h2',
-	            null,
-	            ' Main Page '
-	        ),
 	        props.children
 	    );
 	};
@@ -24983,7 +24978,7 @@
 	            React.createElement(
 	                'h3',
 	                null,
-	                'Weather Component'
+	                'Get Weather'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	            renderMessage()
@@ -26617,42 +26612,6 @@
 	  };
 	};
 
-
-/***/ },
-/* 247 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-
-	var About = function About(props) {
-	    return React.createElement(
-	        'h3',
-	        null,
-	        'About Page'
-	    );
-	};
-
-	module.exports = About;
-
-/***/ },
-/* 248 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-
-	var Examples = function Examples(props) {
-	    return React.createElement(
-	        'h3',
-	        null,
-	        'Examples Page'
-	    );
-	};
-
-	module.exports = Examples;
 
 /***/ }
 /******/ ]);
