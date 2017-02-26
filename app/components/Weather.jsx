@@ -28,16 +28,6 @@ var Weather = React.createClass({
             alert('Cidade não Existe', errorMessage)
         });
 
-        // openWeatherMap.getDescription(location).then(function(description){
-        //     that.setState({
-        //         location: location,
-        //         description: description,
-        //         isLoading: false
-        //     });
-        // }, function(errorMessage){
-        //     that.setState({isLoading: false});
-        //     alert('Cidade não Existe', errorMessage)
-        // });
 
     },
 
