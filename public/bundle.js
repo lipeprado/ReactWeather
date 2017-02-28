@@ -24919,7 +24919,15 @@
 	        'div',
 	        null,
 	        React.createElement(Nav, null),
-	        props.children
+	        React.createElement(
+	            'div',
+	            { className: 'row' },
+	            React.createElement(
+	                'div',
+	                { className: 'columns medium-6 large-4 small-centered' },
+	                props.children
+	            )
+	        )
 	    );
 	};
 
@@ -24950,66 +24958,62 @@
 	            { className: 'top-bar ' },
 	            React.createElement(
 	                'div',
-	                { className: 'row' },
+	                { className: 'top-bar-left' },
 	                React.createElement(
-	                    'div',
-	                    { className: 'top-bar-left' },
+	                    'ul',
+	                    { className: 'menu' },
+	                    React.createElement(
+	                        'li',
+	                        { className: 'menu-text' },
+	                        'React Weather'
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        React.createElement(
+	                            IndexLink,
+	                            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            'Get Weather'
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        React.createElement(
+	                            IndexLink,
+	                            { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            'About'
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        React.createElement(
+	                            IndexLink,
+	                            { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            'Examples'
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                { className: 'top-bar-right' },
+	                React.createElement(
+	                    'form',
+	                    { onSubmit: this.onSearch },
 	                    React.createElement(
 	                        'ul',
 	                        { className: 'menu' },
 	                        React.createElement(
 	                            'li',
-	                            { className: 'menu-text' },
-	                            'React Weather'
+	                            null,
+	                            React.createElement('input', { type: 'search', placeholder: 'Search Weather' })
 	                        ),
 	                        React.createElement(
 	                            'li',
 	                            null,
-	                            React.createElement(
-	                                IndexLink,
-	                                { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                                'Get Weather'
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                IndexLink,
-	                                { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                                'About'
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                IndexLink,
-	                                { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                                'Examples'
-	                            )
-	                        )
-	                    )
-	                ),
-	                React.createElement(
-	                    'div',
-	                    { className: 'top-bar-right' },
-	                    React.createElement(
-	                        'form',
-	                        { onSubmit: this.onSearch },
-	                        React.createElement(
-	                            'ul',
-	                            { className: 'menu' },
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement('input', { type: 'search', placeholder: 'Search Weather' })
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement('input', { type: 'submit', className: 'button primary', value: 'Get Weather' })
-	                            )
+	                            React.createElement('input', { type: 'submit', className: 'button primary', value: 'Get Weather' })
 	                        )
 	                    )
 	                )
@@ -26765,19 +26769,44 @@
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166),
+	    Link = _require.Link;
+
 	var Examples = function Examples(props) {
 	  return React.createElement(
 	    'div',
 	    null,
 	    React.createElement(
-	      'h3',
-	      null,
+	      'h1',
+	      { className: 'text-center' },
 	      'Examples'
 	    ),
 	    React.createElement(
 	      'p',
 	      null,
-	      'Welcome to examples page!'
+	      'Feel examples to try out'
+	    ),
+	    React.createElement(
+	      'ol',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Belo Horizonte' },
+	          'Belo Horizonte, Brazil'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=veneza' },
+	          'Veneza, Italia'
+	        )
+	      )
 	    )
 	  );
 	};

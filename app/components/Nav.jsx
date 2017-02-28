@@ -9,7 +9,7 @@ var Nav = React.createClass({
     render: function() {
         return (
             <div className="top-bar ">
-                <div className="row">
+
                     <div className="top-bar-left">
                         <ul className="menu">
                             <li className="menu-text">React Weather</li>
@@ -25,7 +25,7 @@ var Nav = React.createClass({
                                 <li><input type="submit" className="button primary" value="Get Weather"/></li>
                             </ul>
                     </form>
-                </div>
+                
             </div>
         </div>
         ); } }); module.exports = Nav;
